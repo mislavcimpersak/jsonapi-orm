@@ -98,6 +98,9 @@ def mapped_included(inc: dict) -> dict:
     }
     """
     included = {}
-    for include in inc:
-        included[include.get('type'), include.get('id')] = include
+
+    if inc:
+        for include in inc:
+            included[include.get('type'), include.get('id')] = include
+
     return included
