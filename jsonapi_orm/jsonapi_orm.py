@@ -21,7 +21,10 @@ def resolve(response: dict) -> dict:
             elif isinstance(value, dict):
                 response['data'] = resolve_single_data_item(value)
             else:
-                raise Exception('Invalid JSON:API response. "data" is type "{type(value)}".')
+                raise Exception(
+                    'Invalid JSON:API response. '
+                    '"data" is type "{type(value)}".'
+                )
         else:
             pass
 
@@ -30,8 +33,9 @@ def resolve(response: dict) -> dict:
     except KeyError:
         pass
 
-    # have to keep response['data'] because on that level of dict other keys like links, meta, errors need to be present
-    # also, because data can be a single item or a list
+    # Have to keep response['data'] because on that level of dict other keys
+    # like links, meta, errors need to be present.
+    # Also, because data can be a single item or a list
     return response
 
 
@@ -62,7 +66,11 @@ def resolve_single_data_item(data: dict) -> dict:
             elif isinstance(child_data, list):
                 data[key] = []
                 for item in child_data:
-                    data[key].append(resolve_single_data_item(includes.get((item.get('type'), item.get('id')))))
+                    data[key].append(
+                        resolve_single_data_item(
+                            includes.get((item.get('type'), item.get('id')))
+                        )
+                    )
 
         del data['relationships']
 
@@ -70,7 +78,8 @@ def resolve_single_data_item(data: dict) -> dict:
 
 
 def mapped_included(inc: dict) -> dict:
-    """Makes included more easily searchable by creating a dict that has (type,id) pair as key.
+    """Makes included more easily searchable by creating a dict that
+    has (type,id) pair as key.
 
     Also, returned value for the key can be used for relationships node.
 
