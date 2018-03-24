@@ -51,9 +51,11 @@ Switch to your Python code and use the magic!
     for item in obj.data:
         print(item.name)
 
+
     # single item
     r = requests.get('http://jsonapiplayground.reyesoft.com/v2/authors/1')
     obj = response_to_obj(r.json())
+
     print('SINGLE ITEM')
     print(obj.data.name)
 
