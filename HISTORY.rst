@@ -2,6 +2,11 @@
 History
 =======
 
+0.1.4 (2018-03-25)
+------------------
+
+* Readme examples using slighty modified examples from jsonapi.org which are located in this repo.
+
 0.1.3 (2018-03-25)
 ------------------
 
