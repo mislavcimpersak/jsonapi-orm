@@ -38,7 +38,7 @@ setup(
     include_package_data=True,
     keywords='jsonapi-orm',
     name='jsonapi-orm',
-    packages=find_packages(include=['jsonapi-orm']),
+    packages=find_packages(include=['jsonapi_orm']),
     setup_requires=setup_requirements,
     test_suite='tests',
     tests_require=test_requirements,
