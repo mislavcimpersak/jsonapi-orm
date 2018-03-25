@@ -4,7 +4,7 @@
 
 __author__ = """Mislav Cimperšak"""
 __email__ = 'mislav.cimpersak@gmail.com'
-__version__ = '0.1.0'
+__version__ = '0.1.1'
 
 
 from .jsonapi_orm import response_to_obj  # noqa
