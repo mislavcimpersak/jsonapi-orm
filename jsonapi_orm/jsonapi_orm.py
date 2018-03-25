@@ -56,7 +56,7 @@ def resolve_single_data_item(data: dict) -> dict:
     if relationships:
         for key, value in relationships.items():
             child = resolve(value)
-            child_data = child['data']
+            child_data = child.get('data')
             if isinstance(child_data, dict):
                 data[key] = resolve_single_data_item(
                     includes.get(
