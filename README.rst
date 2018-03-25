@@ -23,9 +23,8 @@ Quick and dirty ORM that maps JSON:API responses to object attributes.
 * Documentation: https://jsonapi-orm.readthedocs.io.
 
 
-------
 How To
-------
+======
 
 Use Requests_ or (if you are a masochist) Python's built-in urllib modules to make the request to your JSON:API service and from there pass the response to JSON:API ORM.
 
@@ -64,6 +63,7 @@ Switch to your Python code and use the magic!
     # author is defined as a relationship
     print(obj.data.author.id)
     print(obj.data.author.twitter)
+
 
 Caveats
 -------
