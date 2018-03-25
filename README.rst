@@ -24,7 +24,7 @@ Quick and dirty ORM that maps JSON:API responses to object attributes.
 
 
 How To
-======
+------
 
 Use Requests_ or (if you are a masochist) Python's built-in urllib modules to make the request to your JSON:API service and from there pass the response to JSON:API ORM.
 
