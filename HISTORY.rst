@@ -2,7 +2,7 @@
 History
 =======
 
-0.1.1 (2018-03-25)
+0.1.2 (2018-03-25)
 ------------------
 
 * Fixed a bug when included is not present in response.
