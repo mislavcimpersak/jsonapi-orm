@@ -22,9 +22,9 @@ def resolve(response: dict) -> dict:
                 response['data'] = resolve_single_data_item(value)
             else:
                 raise Exception(
-                    'Invalid JSON:API response. '
-                    '"data" is type "{type(value)}".'
+                    f'Invalid JSON:API response. "data" is type {type(value)}.'
                 )
+
         else:
             pass
 
@@ -59,9 +59,7 @@ def resolve_single_data_item(data: dict) -> dict:
             child_data = child.get('data')
             if isinstance(child_data, dict):
                 data[key] = resolve_single_data_item(
-                    includes.get(
-                        (child_data.get('type'), child_data.get('id'))
-                    )
+                    includes.get((child_data.get('type'), child_data.get('id')))
                 )
             elif isinstance(child_data, list):
                 data[key] = []
