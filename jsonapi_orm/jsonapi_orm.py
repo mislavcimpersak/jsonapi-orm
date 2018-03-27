@@ -29,6 +29,8 @@ def resolve(response: dict) -> dict:
             pass
 
     try:
+        # includes are now accessed via relationships, not directly,
+        # so `included` key is not necessary anymore
         del response['included']
     except KeyError:
         pass
