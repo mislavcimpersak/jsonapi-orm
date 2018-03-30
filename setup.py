@@ -17,7 +17,7 @@ requirements = [
 
 setup_requirements = ['pytest-runner', ]
 
-test_requirements = ['pytest', ]
+test_requirements = ['pytest', 'pytest-cov']
 
 setup(
     author="Mislav Cimperšak",
