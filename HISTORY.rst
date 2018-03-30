@@ -5,6 +5,11 @@ History
 0.1.7 (2018-03-25)
 ------------------
 
+* Using readme.rst for frontpage of the docs.
+
+0.1.7 (2018-03-25)
+------------------
+
 * Fixed pip install.
 
 0.1.6 (2018-03-25)
