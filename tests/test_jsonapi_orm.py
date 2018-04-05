@@ -50,7 +50,9 @@ def test_list_response(list_response):
 
 
 def test_single_response(single_response):
-    """Testing if data is a single object and this object has set attributes."""
+    """Testing if data is a single object and this object has set
+    attributes.
+    """
     obj = response_to_obj(single_response)
 
     assert isinstance(obj.data, dict)

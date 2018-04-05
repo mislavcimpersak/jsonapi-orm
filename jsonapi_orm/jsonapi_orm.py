@@ -61,7 +61,9 @@ def resolve_single_data_item(data: dict) -> dict:
             child_data = child.get('data')
             if isinstance(child_data, dict):
                 data[key] = resolve_single_data_item(
-                    includes.get((child_data.get('type'), child_data.get('id')))
+                    includes.get(
+                        (child_data.get('type'), child_data.get('id'))
+                    )
                 )
             elif isinstance(child_data, list):
                 data[key] = []
