@@ -15,13 +15,14 @@ script: tox
 # create the Github repo and add it to Travis, run the
 # following command to finish PyPI deployment setup:
 # $ travis encrypt --add deploy.password
-deploy:
-  provider: pypi
-  distributions: sdist bdist_wheel
-  user: mislav.cimpersak
-  password:
-    secure: $PYPI_PASS
-  on:
-    tags: true
-    repo: mislavcimpersak/jsonapi-orm
-    python: 3.6
+
+# deploy:
+#   provider: pypi
+#   distributions: sdist bdist_wheel
+#   user: mislav.cimpersak
+#   password:
+#     secure: $PYPI_PASS
+#   on:
+#     tags: true
+#     repo: mislavcimpersak/jsonapi-orm
+#     python: 3.6
