@@ -1,0 +1,56 @@
+version: 2
+
+workflows:
+  version: 2
+  test:
+    jobs:
+      - test-3.5
+      - test-3.6
+
+jobs:
+  test-3.5: &test-template
+    docker:
+      - image: circleci/python:3.5
+
+    working_directory: ~/repo
+
+    steps:
+      - checkout
+
+      # Download and cache dependencies
+      - restore_cache:
+          keys:
+          - v1-dependencies-{{ checksum "requirements_dev.txt" }}
+          # fallback to using the latest cache if no exact match is found
+          - v1-dependencies-
+
+      - run:
+          name: install dependencies
+          command: |
+            python3 -m venv ~/venv
+            . ~/venv/bin/activate
+            pip install -r requirements_dev.txt
+            pip install -e .
+
+      - save_cache:
+          paths:
+            - ~/venv
+          key: v1-dependencies-{{ checksum "requirements_dev.txt" }}
+
+      # run tests!
+      - run:
+          name: run tests
+          command: |
+            . ~/venv/bin/activate
+            pytest
+            # COVERALLS_REPO_TOKEN env var set in CircleCI web UI
+            coveralls
+
+      - store_artifacts:
+          path: test-reports
+          destination: test-reports
+
+  test-3.6:
+    <<: *test-template
+    docker:
+      - image: circleci/python:3.6
