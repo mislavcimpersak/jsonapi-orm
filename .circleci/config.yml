@@ -1,6 +1,14 @@
 version: 2
+
+workflows:
+  version: 2
+  test:
+    jobs:
+      - test-3.6
+      - test-3.5
+
 jobs:
-  build py35:
+  test-3.5:
     docker:
       - image: circleci/python:3.5
 
@@ -22,6 +30,7 @@ jobs:
             python3 -m venv ~/venv
             . ~/venv/bin/activate
             pip install -r requirements_dev.txt
+            pip install -e .
 
       - save_cache:
           paths:
@@ -33,14 +42,13 @@ jobs:
           name: run tests
           command: |
             . ~/venv/bin/activate
-            pip install -e .
             pytest
 
       - store_artifacts:
           path: test-reports
           destination: test-reports
 
-  build py36:
+  test-3.6:
     docker:
       - image: circleci/python:3.6
 
@@ -62,6 +70,7 @@ jobs:
             python3 -m venv ~/venv
             . ~/venv/bin/activate
             pip install -r requirements_dev.txt
+            pip install -e .
 
       - save_cache:
           paths:
@@ -73,7 +82,6 @@ jobs:
           name: run tests
           command: |
             . ~/venv/bin/activate
-            pip install -e .
             pytest
 
       - store_artifacts:
