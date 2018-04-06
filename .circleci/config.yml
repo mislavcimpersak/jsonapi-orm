@@ -43,6 +43,8 @@ jobs:
           command: |
             . ~/venv/bin/activate
             pytest
+            # COVERALLS_REPO_TOKEN env var set in CircleCI web UI
+            coveralls
 
       - store_artifacts:
           path: test-reports
