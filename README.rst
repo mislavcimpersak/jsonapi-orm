@@ -6,8 +6,13 @@ JSON:API ORM
 .. image:: https://img.shields.io/pypi/v/jsonapi_orm.svg
         :target: https://pypi.python.org/pypi/jsonapi_orm
 
-.. image:: https://img.shields.io/travis/mislavcimpersak/jsonapi_orm.svg
-        :target: https://travis-ci.org/mislavcimpersak/jsonapi_orm
+.. image:: https://img.shields.io/circleci/project/github/mislavcimpersak/jsonapi-orm.svg
+    :target: https://circleci.com/gh/mislavcimpersak/jsonapi-orm
+    :alt: CircleCI
+
+.. image:: https://img.shields.io/coveralls/github/mislavcimpersak/jsonapi-orm.svg
+    :target: https://coveralls.io/github/mislavcimpersak/jsonapi-orm
+    :alt: Coveralls github
 
 .. image:: https://readthedocs.org/projects/jsonapi-orm/badge/?version=latest
         :target: https://jsonapi-orm.readthedocs.io/en/latest/?badge=latest
