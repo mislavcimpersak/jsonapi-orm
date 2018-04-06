@@ -22,7 +22,9 @@ def resolve(response: dict) -> dict:
                 response['data'] = resolve_single_data_item(value)
             else:
                 raise Exception(
-                    f'Invalid JSON:API response. "data" is type {type(value)}.'
+                    'Invalid JSON:API response. "data" is type {}'.format(
+                        type(value)
+                    )
                 )
 
         else:
