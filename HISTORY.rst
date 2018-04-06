@@ -2,7 +2,7 @@
 History
 =======
 
-0.1.8 (2018-03-30)
+0.1.8 (2018-04-06)
 ------------------
 
 * Added test config and basic tests.
