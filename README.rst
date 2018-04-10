@@ -3,21 +3,21 @@ JSON:API ORM
 ============
 
 
-.. image:: https://img.shields.io/pypi/v/jsonapi_orm.svg
-        :target: https://pypi.python.org/pypi/jsonapi_orm
+.. image:: https://badge.fury.io/py/jsonapi-orm.svg
+    :target: https://badge.fury.io/py/jsonapi-orm
+    :alt: PyPI
 
-.. image:: https://img.shields.io/circleci/project/github/mislavcimpersak/jsonapi-orm.svg
+.. image:: https://circleci.com/gh/mislavcimpersak/jsonapi-orm.svg?style=svg
     :target: https://circleci.com/gh/mislavcimpersak/jsonapi-orm
     :alt: CircleCI
 
-.. image:: https://img.shields.io/coveralls/github/mislavcimpersak/jsonapi-orm.svg
-    :target: https://coveralls.io/github/mislavcimpersak/jsonapi-orm
-    :alt: Coveralls github
+.. image:: https://coveralls.io/repos/github/mislavcimpersak/jsonapi-orm/badge.svg?branch=master
+    :target: https://coveralls.io/github/mislavcimpersak/jsonapi-orm?branch=master
+    :alt: Coveralls
 
 .. image:: https://readthedocs.org/projects/jsonapi-orm/badge/?version=latest
-        :target: https://jsonapi-orm.readthedocs.io/en/latest/?badge=latest
-        :alt: Documentation Status
-
+    :target: https://jsonapi-orm.readthedocs.io/en/latest/?badge=latest
+    :alt: Documentation Status
 
 
 
