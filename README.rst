@@ -26,6 +26,7 @@ Quick and dirty ORM that maps JSON:API responses to object attributes.
 
 * Free software: BSD license
 * Documentation: https://jsonapi-orm.readthedocs.io.
+* Requirements: Python 3.5+
 
 
 How To
